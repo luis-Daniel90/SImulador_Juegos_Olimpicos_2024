@@ -1,22 +1,21 @@
 package com.logica.clases;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Evento {
-    public String evento;
+    private String nombre;
+    private List<Participante> participantes;
 
-        public Evento(String evento){
-        this.evento = evento;
+    public Evento(String nombre) {
+        this.nombre = nombre;
+        this.participantes = new ArrayList<>();
     }
 
-    public String getEvento() {
-        return evento;
+    public void agregarParticipante(Participante p) {
+        participantes.add(p);
     }
 
-    public void setEvento(String evento) {
-        this.evento = evento;
-    }
-
-    @Override
-    public String toString() {
-        return "Evento: " + evento;
-    }
+    public String getNombre() { return nombre; }
+    public List<Participante> getParticipantes() { return participantes; }
 }
