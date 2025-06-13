@@ -14,4 +14,9 @@ public class Evento {
     public void setEvento(String evento) {
         this.evento = evento;
     }
+
+    @Override
+    public String toString() {
+        return "Evento: " + evento;
+    }
 }

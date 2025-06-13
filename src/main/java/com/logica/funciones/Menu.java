@@ -1,5 +1,6 @@
 package com.logica.funciones;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -23,6 +24,13 @@ public class Menu {
             opcion = teclado.nextInt();
 
             if (opcion == 1) {
+
+                Map<String, Evento> eventos = RegistroEventos.registrarEvento();
+        // Mostramos todos los eventos registrados
+        System.out.println("\nEventos registrados:");
+        eventos.forEach((nombre, evento) -> 
+            System.out.println("Nombre: " + nombre + " => " + evento));
+
             } else if (opcion == 2) {
                 // Ejecutamos la función que está en otro paquete
                 Map<String, Participante> participantes = RegistroPariticpantes.registrar();
@@ -31,7 +39,7 @@ public class Menu {
                 participantes.forEach((nombre, datos) -> System.out.println("Nombre: " + nombre + datos));
 
             } else if (opcion == 3) {
-                System.out.println("3");
+
             } else if (opcion == 4) {
                 System.out.println("4");
             } else if (opcion == 55) {

@@ -1,14 +1,12 @@
 package com.logica.funciones;
-
+import com.logica.clases.Participante;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import com.logica.clases.Participante;
-
 public class RegistroPariticpantes {
 
-    public static  Map<String, Participante> registrar() {
+    public static Map<String, Participante> registrar() {
 
         // Creamos un mapa para almacenar participantes usando el nombre como clave
         Map<String, Participante> mapaParticipantes = new HashMap<>();
@@ -36,9 +34,7 @@ public class RegistroPariticpantes {
 
         } while (continuar.equalsIgnoreCase("s"));
 
-        teclado.close();
-        return mapaParticipantes;
-       
+        return mapaParticipantes;       
     }   
 
 }
